@@ -46,6 +46,9 @@ namespace Lab_1_Alg
                     InsertMethod Insert = new InsertMethod(subs.ToList());
                     Insert.InsertSort(Steps, Result);
                     break;
+                case 2:
+                    button2_Click(sender,e);
+                    break;
 
             }
         }
@@ -54,13 +57,28 @@ namespace Lab_1_Alg
         {
             Random rand = new Random();
             int m = int.Parse(n.Text);
-            for (int i = 0; i < m-1; i++)
+            switch (comboBox1.SelectedIndex)
             {
-                EnterData.AppendText(rand.Next(50).ToString());
-                EnterData.AppendText(",");
+                case 0:
+                    for (int i = 0; i < m - 1; i++)
+                    {
+                        EnterData.AppendText(rand.Next(50).ToString());
+                        EnterData.AppendText(",");
+                    }
+                    EnterData.AppendText(rand.Next(50).ToString());
+                    break;
+                case 2:
+                    int[,] data = new int[m, m];
+                    for (int i = 0; i < m; i++)
+                    {
+                        for (int j = 0; j < m; j++)
+                        {
+                            data[i, j] = rand.Next(100);
+                        }
+                    }
+                    Shell_Method.ShellSort(data,Steps);
+                        break;
             }
-            EnterData.AppendText(rand.Next(50).ToString());
-
         }
     }
 }
