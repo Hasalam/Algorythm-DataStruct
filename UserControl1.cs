@@ -19,6 +19,14 @@ namespace Lab_1_Alg
             InitializeComponent();
         }
 
+        static float NextFloat(Random random)
+        {
+            double mantissa = (random.NextDouble() * 2.0) - 1.0;
+            // choose -149 instead of -126 to also generate subnormal floats (*)
+            double exponent = Math.Pow(2.0, random.Next(-126, 128));
+            return (float)(mantissa * exponent);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Result.Clear();
@@ -49,6 +57,9 @@ namespace Lab_1_Alg
                 case 2:
                     button2_Click(sender,e);
                     break;
+                case 3:
+
+                    break;
 
             }
         }
@@ -78,6 +89,17 @@ namespace Lab_1_Alg
                     }
                     Shell_Method.ShellSort(data,Steps);
                         break;
+                case 3:
+                    double[] datafl = new double[m];
+                    for (int i = 0; i < m; i++)
+                    {
+                        datafl[i] = rand.NextDouble();
+                        
+                    }
+                    Steps.AppendText(string.Join(" ", datafl));
+                    Steps.AppendText("\n\n");
+                    QS.QuickSort(datafl,Steps,Result);
+                    break;
             }
         }
     }
