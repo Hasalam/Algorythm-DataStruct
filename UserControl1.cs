@@ -60,6 +60,9 @@ namespace Lab_1_Alg
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Result.Clear();
+            Steps.Clear();
+            Individual.Clear();
             Random rand = new Random();
             int m = int.Parse(n.Text);
             switch (comboBox1.SelectedIndex)
