@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Bubble_Sort.cs" />
     <Compile Include="InsertMethod.cs" />
+    <Compile Include="MergeSort.cs" />
     <Compile Include="QS.cs" />
     <Compile Include="Shell_Method.cs" />
     <Compile Include="UserControl1.cs">
