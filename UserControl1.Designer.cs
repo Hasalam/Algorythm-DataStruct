@@ -164,7 +164,8 @@
             "Бульбашка",
             "Вибір",
             "Шелла",
-            "Швидке"});
+            "Швидке",
+            "Злиття"});
             this.comboBox1.Location = new System.Drawing.Point(285, 23);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);

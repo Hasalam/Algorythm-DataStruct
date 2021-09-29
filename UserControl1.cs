@@ -54,7 +54,14 @@ namespace Lab_1_Alg
                 case 3:
 
                     break;
-
+                case 4:
+                    int[] arr = new int[subs.Length];
+                    for (int i = 0; i < arr.Length; i++)
+                    { 
+                        arr[i]=int.Parse(subs[i]);
+                    }
+                    MergeSort.UserMergeSort(arr,Steps,Result,Individual);
+                    break;
             }
         }
 
@@ -96,6 +103,15 @@ namespace Lab_1_Alg
                     Steps.AppendText(string.Join(" ", datafl));
                     Steps.AppendText("\n\n");
                     QS.QuickSort(datafl,Steps,Result);
+                    break;
+                case 4:
+                    int[] arr = new int[m];
+                    for (int i = 0; i < m; i++)
+                    {
+                        arr[i] = rand.Next(-100,100);
+                    }
+                    EnterData.Text = string.Join(" ",arr);
+                    MergeSort.UserMergeSort(arr,Steps,Result,Individual);
                     break;
             }
         }
