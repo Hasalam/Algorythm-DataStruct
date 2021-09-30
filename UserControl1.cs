@@ -62,6 +62,14 @@ namespace Lab_1_Alg
                     }
                     MergeSort.UserMergeSort(arr,Steps,Result,Individual);
                     break;
+                case 5:
+                    int[] arr1 = new int[subs.Length];
+                    for (int i = 0; i < arr1.Length; i++)
+                    {
+                        arr1[i] = int.Parse(subs[i]);
+                    }
+                    Counting_Sort.CountSort(arr1, Steps, Result, Individual);
+                    break;
             }
         }
 
@@ -112,6 +120,15 @@ namespace Lab_1_Alg
                     }
                     EnterData.Text = string.Join(" ",arr);
                     MergeSort.UserMergeSort(arr,Steps,Result,Individual);
+                    break;
+                case 5:
+                    int[] arr1 = new int[m];
+                    for (int i = 0; i < m; i++)
+                    {
+                        arr1[i] = rand.Next(0,10);
+                    }
+                    EnterData.Text = string.Join(" ", arr1);
+                    Counting_Sort.CountSort(arr1,Steps,Result,Individual);
                     break;
             }
         }
